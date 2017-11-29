@@ -3,7 +3,7 @@ A 2D CDT Refinement Software on GPU
 
 * A NVIDIA GPU is required since this project is implemented using CUDA
 
-Refinement Routine (located in refine.h and refine.cu):<br/>
+Refinement Routine (located in refine.h and refine.cu):  
 void GPU_Refine_Quality(  
 &nbsp;&nbsp;&nbsp;&nbsp; triangulateio *input,  
 &nbsp;&nbsp;&nbsp;&nbsp; triangulateio *result,  
@@ -16,10 +16,10 @@ void GPU_Refine_Quality(
 &nbsp;&nbsp;&nbsp;&nbsp; TStatus **ts_debug)  
  
 triangulateio *input:  
-Input is a constrained Delaunay triangulation. Use the same data type "triangulateio" as Triangle software (https://www.cs.cmu.edu/~quake/triangle.html), see triangle.h and triangle.cpp for more information. GenerateRandomInput routine in mesh.h and mesh.cpp is able to generate a random point set and a random segment set, then compute the CDT of them as an input. You can make your own input as well. Some input samples are also give in input folder.
+Input is a constrained Delaunay triangulation. Use the same data type "triangulateio" as Triangle software (https://www.cs.cmu.edu/~quake/triangle.html), see triangle.h and triangle.cpp for more information. GenerateRandomInput routine in mesh.h and mesh.cpp is able to generate a random point set and a random segment set, then compute the CDT of them as an input. You can make your own input as well. Some input samples are also given in input folder.
 
 triangulateio *result:  
-A pointer. Make sure it is not NULL. Its pointlist, trianglelist and segmentlist contain the final refined CDT.
+A pointer. Make sure it is not NULL. Its pointlist, trianglelist and segmentlist form the final refined CDT.
 
 double theta:  
 Minimum allowable angle. Theoretically, it cannot be smaller than 20.7 degree. The triangle in final mesh wouldn't contain angle smaller than theta.
