@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Triangle">
+      <UniqueIdentifier>{e809a877-3365-41f9-94f6-38436def3f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda">
+      <UniqueIdentifier>{443320df-6306-4535-9d2b-339765d36059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{f9dc7e08-6f5a-4dde-8202-c0bda4ae73e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{b01017ef-9d7c-424e-94ee-69fb1d4c6d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Predicates">
+      <UniqueIdentifier>{2e9d9c39-6cde-4810-ac4d-6e4957d0c58b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mesh.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="refine.h">
+      <Filter>Cuda</Filter>
+    </ClInclude>
+    <ClInclude Include="cudaCCW.h">
+      <Filter>Utilities\Predicates</Filter>
+    </ClInclude>
+    <ClInclude Include="predicates.h">
+      <Filter>Utilities\Predicates</Filter>
+    </ClInclude>
+    <ClInclude Include="triangle.h">
+      <Filter>Triangle</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="predicates.cpp">
+      <Filter>Utilities\Predicates</Filter>
+    </ClCompile>
+    <ClCompile Include="triangle.cpp">
+      <Filter>Triangle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="refine.cu">
+      <Filter>Cuda</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>
