@@ -6891,44 +6891,44 @@ void GPU_Refine_Quality(triangulateio *input, triangulateio *result, double thet
 
 		cudaDeviceSynchronize();
 
-		if(iteration == debug_iter)
-			break;
+		//if(iteration == debug_iter)
+		//	break;
 
-		if(false)
-		{
-			int * debug_tl = new int[3*last_triangle];
-			REAL2 * debug_pl = new REAL2[last_point];
-			TStatus * debug_ts = new TStatus[last_triangle];
-			cudaMemcpy(debug_tl, thrust::raw_pointer_cast(&t_trianglelist[0]),sizeof(int)*3*last_triangle,cudaMemcpyDeviceToHost);
-			cudaMemcpy(debug_pl, thrust::raw_pointer_cast(&t_pointlist[0]),sizeof(REAL2)*last_point,cudaMemcpyDeviceToHost);
-			cudaMemcpy(debug_ts, thrust::raw_pointer_cast(&t_TStatus[0]),sizeof(TStatus)*last_triangle, cudaMemcpyDeviceToHost);
-			for(int i = 0; i < last_triangle; i++)
-			{
-				if(!debug_ts[i].isNull())
-				{
-					bool errorflag = false;
-					int p[3];
-					REAL2 v[3];
-					for(int j=0; j<3; j++)
-					{
-						p[j] = debug_tl[3*i+j];
-						v[j] = debug_pl[p[j]];
-					}
-					for(int j=0; j<2; j++)
-					{
-						for(int k=j+1; k<3; k++)
-						{
-							if(v[j].x == v[k].x && v[j].y == v[k].y)
-							{
-								errorflag = true;
-							}
-						}
-					}
-					if(errorflag)
-						printf("After splitTriangles - Tri %d: Duplicate vertice\n",i);
-				}
-			}
-		}
+		//if(false)
+		//{
+		//	int * debug_tl = new int[3*last_triangle];
+		//	REAL2 * debug_pl = new REAL2[last_point];
+		//	TStatus * debug_ts = new TStatus[last_triangle];
+		//	cudaMemcpy(debug_tl, thrust::raw_pointer_cast(&t_trianglelist[0]),sizeof(int)*3*last_triangle,cudaMemcpyDeviceToHost);
+		//	cudaMemcpy(debug_pl, thrust::raw_pointer_cast(&t_pointlist[0]),sizeof(REAL2)*last_point,cudaMemcpyDeviceToHost);
+		//	cudaMemcpy(debug_ts, thrust::raw_pointer_cast(&t_TStatus[0]),sizeof(TStatus)*last_triangle, cudaMemcpyDeviceToHost);
+		//	for(int i = 0; i < last_triangle; i++)
+		//	{
+		//		if(!debug_ts[i].isNull())
+		//		{
+		//			bool errorflag = false;
+		//			int p[3];
+		//			REAL2 v[3];
+		//			for(int j=0; j<3; j++)
+		//			{
+		//				p[j] = debug_tl[3*i+j];
+		//				v[j] = debug_pl[p[j]];
+		//			}
+		//			for(int j=0; j<2; j++)
+		//			{
+		//				for(int k=j+1; k<3; k++)
+		//				{
+		//					if(v[j].x == v[k].x && v[j].y == v[k].y)
+		//					{
+		//						errorflag = true;
+		//					}
+		//				}
+		//			}
+		//			if(errorflag)
+		//				printf("After splitTriangles - Tri %d: Duplicate vertice\n",i);
+		//		}
+		//	}
+		//}
 
 		//if(iteration == debug_iter)
 		//	break;
@@ -6979,46 +6979,46 @@ void GPU_Refine_Quality(triangulateio *input, triangulateio *result, double thet
 
 		cudaDeviceSynchronize();
 
-		if(false)
-		{
-			int * debug_tl = new int[3*last_triangle];
-			REAL2 * debug_pl = new REAL2[last_point];
-			TStatus * debug_ts = new TStatus[last_triangle];
-			cudaMemcpy(debug_tl, thrust::raw_pointer_cast(&t_trianglelist[0]),sizeof(int)*3*last_triangle,cudaMemcpyDeviceToHost);
-			cudaMemcpy(debug_pl, thrust::raw_pointer_cast(&t_pointlist[0]),sizeof(REAL2)*last_point,cudaMemcpyDeviceToHost);
-			cudaMemcpy(debug_ts, thrust::raw_pointer_cast(&t_TStatus[0]),sizeof(TStatus)*last_triangle, cudaMemcpyDeviceToHost);
-			for(int i = 0; i < last_triangle; i++)
-			{
-				if(!debug_ts[i].isNull())
-				{
-					bool errorflag = false;
-					int p[3];
-					REAL2 v[3];
-					for(int j=0; j<3; j++)
-					{
-						p[j] = debug_tl[3*i+j];
-						v[j] = debug_pl[p[j]];
-					}
-					for(int j=0; j<2; j++)
-					{
-						for(int k=j+1; k<3; k++)
-						{
-							if(v[j].x == v[k].x && v[j].y == v[k].y)
-							{
-								errorflag = true;
-							}
-						}
-					}
-					if(errorflag)
-						printf("After splitEncsegs - Tri %d: Duplicate vertice\n",i);
-				}
-			}
-		}
+		//if(false)
+		//{
+		//	int * debug_tl = new int[3*last_triangle];
+		//	REAL2 * debug_pl = new REAL2[last_point];
+		//	TStatus * debug_ts = new TStatus[last_triangle];
+		//	cudaMemcpy(debug_tl, thrust::raw_pointer_cast(&t_trianglelist[0]),sizeof(int)*3*last_triangle,cudaMemcpyDeviceToHost);
+		//	cudaMemcpy(debug_pl, thrust::raw_pointer_cast(&t_pointlist[0]),sizeof(REAL2)*last_point,cudaMemcpyDeviceToHost);
+		//	cudaMemcpy(debug_ts, thrust::raw_pointer_cast(&t_TStatus[0]),sizeof(TStatus)*last_triangle, cudaMemcpyDeviceToHost);
+		//	for(int i = 0; i < last_triangle; i++)
+		//	{
+		//		if(!debug_ts[i].isNull())
+		//		{
+		//			bool errorflag = false;
+		//			int p[3];
+		//			REAL2 v[3];
+		//			for(int j=0; j<3; j++)
+		//			{
+		//				p[j] = debug_tl[3*i+j];
+		//				v[j] = debug_pl[p[j]];
+		//			}
+		//			for(int j=0; j<2; j++)
+		//			{
+		//				for(int k=j+1; k<3; k++)
+		//				{
+		//					if(v[j].x == v[k].x && v[j].y == v[k].y)
+		//					{
+		//						errorflag = true;
+		//					}
+		//				}
+		//			}
+		//			if(errorflag)
+		//				printf("After splitEncsegs - Tri %d: Duplicate vertice\n",i);
+		//		}
+		//	}
+		//}
 
 		printf("Iteration = %d, numberofbad = %d\n",iteration,numberofbad);
 
-		if(iteration == debug_iter)
-			break;
+		//if(iteration == debug_iter)
+		//	break;
 
 		iteration ++;
 	}
