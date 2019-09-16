@@ -1,8 +1,10 @@
 # GPU_CDT_Refine
 A 2D CDT Refinement Software on GPU
 
+Project Website: https://www.comp.nus.edu.sg/~tants/gqm.html
+
 * A NVIDIA GPU is required since this project is implemented using CUDA
-* The development environment: Visual Studio 2010 and CUDA 7.5
+* The development environment: Visual Studio 2010 and CUDA 7.5 (Need to include both SDK and Sample. The later is for timming methods. Changes for paths might needed for Visual Studio project setting. Please use x64 and Release mode.)
 
 Refinement Routine (located in refine.h and refine.cu):  
 void GPU_Refine_Quality(  
