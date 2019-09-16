@@ -45,7 +45,8 @@ PStatus **ps_debug:
 The debug pointer of the status of point. For debug only.
 
 TStatus **ts_debug:  
-The debug pointer of the status of triangle. For debug only.  
+The debug pointer of the status of triangle. For debug only.
+
 --------------------------------------------------------------------------
 Proceed to main.cpp to check how to call gpu refinement routine properly.
 
