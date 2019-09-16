@@ -7,7 +7,7 @@ Paper: Computing Delaunay Refinement Using the GPU. Z. Chen, M. Qi, and T.S. Tan
 
 * A NVIDIA GPU is required since this project is implemented using CUDA
 * The development environment: Visual Studio 2010 and CUDA 7.5 (Need to include both CUDA SDK and Sample. The later is for timing routines. Changes for paths might be needed for Visual Studio project setting. Please use x64 and Release mode.)
-
+--------------------------------------------------------------------------
 Refinement Routine (located in refine.h and refine.cu):  
 void GPU_Refine_Quality(  
 &nbsp;&nbsp;&nbsp;&nbsp; triangulateio *input,  
@@ -46,6 +46,6 @@ The debug pointer of the status of point. For debug only.
 
 TStatus **ts_debug:
 The debug pointer of the status of triangle. For debug only.
-
+--------------------------------------------------------------------------
 Proceed to main.cpp to check how to call gpu refinement routine properly.
 
